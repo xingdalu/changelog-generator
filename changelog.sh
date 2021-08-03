@@ -17,7 +17,7 @@ git fetch --prune --unshallow 1>&2
 # think of a better default.
 if [ -z "$base_ref" ]
 then
-  base_ref=$(git rev-list --max-parents=0 HEAD)
+  base_ref=$(git rev-list --max-parents=1 HEAD)
 fi
 
 log=$(git log "${base_ref}...${head_ref}" \
